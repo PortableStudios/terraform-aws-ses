@@ -67,3 +67,9 @@ variable "iam_permissions" {
   description = "Specifies permissions for the IAM user."
   default     = ["ses:SendRawEmail"]
 }
+
+variable "enable_all_iam_resources" {
+  type = bool
+  description = "Specifies either all resources for the IAM user or just the aws_ses_domain_identity ARNs."
+  default = true
+}
